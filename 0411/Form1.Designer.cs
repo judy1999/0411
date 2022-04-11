@@ -30,11 +30,11 @@ namespace _0411
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_ip = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_port = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_ListenPort = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -47,12 +47,12 @@ namespace _0411
             this.label1.TabIndex = 0;
             this.label1.Text = "目標ip";
             // 
-            // textBox1
+            // textBox_ip
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBox_ip.Location = new System.Drawing.Point(77, 151);
+            this.textBox_ip.Name = "textBox_ip";
+            this.textBox_ip.Size = new System.Drawing.Size(100, 22);
+            this.textBox_ip.TabIndex = 1;
             // 
             // label2
             // 
@@ -63,12 +63,12 @@ namespace _0411
             this.label2.TabIndex = 2;
             this.label2.Text = "目標port";
             // 
-            // textBox2
+            // textBox_port
             // 
-            this.textBox2.Location = new System.Drawing.Point(299, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 3;
+            this.textBox_port.Location = new System.Drawing.Point(299, 151);
+            this.textBox_port.Name = "textBox_port";
+            this.textBox_port.Size = new System.Drawing.Size(100, 22);
+            this.textBox_port.TabIndex = 3;
             // 
             // label3
             // 
@@ -79,12 +79,12 @@ namespace _0411
             this.label3.TabIndex = 4;
             this.label3.Text = "接聽port";
             // 
-            // textBox3
+            // textBox_ListenPort
             // 
-            this.textBox3.Location = new System.Drawing.Point(485, 150);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
+            this.textBox_ListenPort.Location = new System.Drawing.Point(485, 150);
+            this.textBox_ListenPort.Name = "textBox_ListenPort";
+            this.textBox_ListenPort.Size = new System.Drawing.Size(100, 22);
+            this.textBox_ListenPort.TabIndex = 5;
             // 
             // button1
             // 
@@ -102,16 +102,19 @@ namespace _0411
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox_ListenPort);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_port);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_ip);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,11 +123,11 @@ namespace _0411
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_ip;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_port;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_ListenPort;
         private System.Windows.Forms.Button button1;
     }
 }
